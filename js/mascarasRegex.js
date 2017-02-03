@@ -11,3 +11,14 @@ fuction mascaraCep(variavel){
     return retorno;
     
 }
+
+/*
+* simples validação telefone nacional
+* @TODO refatorar
+*/
+function validaTelefoneNacional(telefone){
+    var valida = telefone.match(/^((5{2})?(\d{2})?([987])?(\d{4})(\d{4}))$/);
+    if(valida){
+    	console.log(valida);
+    }
+}
