@@ -12,6 +12,18 @@ fuction mascaraCep(variavel){
     
 }
 
+/**
+* Mascara cnpj
+**/
+function cnpj(str){
+    str = str.replace(/\D/g, ''); 
+    if(str.length == 14){
+        var cnpj = str.match(/(\d{2}).?(\d{3}).?(\d{3}).?(\d{4})-?(\d{2})/);
+        return cnpj[1]+'.'+cnpj[2]+'.'+cnpj[3]+'/'+cnpj[4]+'-'+cnpj[5];
+    }
+	return false;
+}
+
 /*
 * simples validação telefone nacional
 */
