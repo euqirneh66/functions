@@ -51,3 +51,12 @@ function validaTelefoneNacional(telefone){
     }
     return retorno;
 }
+
+/**
+* Substitui uma tag html por outra tag 
+* ex: replaceTag('<span>teste</span>','span','b');
+*/
+function replaceTag(html, oldtag, newtag){
+	var re = new RegExp('(<\\/?)('+oldtag+')(>)','g');
+	return html.replace(re, "$1"+newtag+"$3");
+}
