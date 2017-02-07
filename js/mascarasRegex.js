@@ -55,6 +55,7 @@ function validaTelefoneNacional(telefone){
 /**
 * Substitui uma tag html por outra tag 
 * ex: replaceTag('<span>teste</span>','span','b');
+* "<span>teste</span>".replace(/(<\/?)(\w+?)(>)/g,"$1b$3")
 */
 function replaceTag(html, oldtag, newtag){
 	var re = new RegExp('(<\\/?)('+oldtag+')(>)','g');
